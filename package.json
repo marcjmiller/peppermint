@@ -1,10 +1,11 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next dev ",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "seed": "prisma db seed",
+    "run:dev": "yarn migrate && yarn generate && yarn seed && yarn dev",
     "migrate-dev": "prisma migrate dev --preview-feature",
     "migrate": "prisma migrate deploy",
     "generate": "prisma generate",
