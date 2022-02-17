@@ -27,7 +27,7 @@ function Auth({ children }) {
   // Session is being fetched, or no user.
   // If no user, useEffect() will redirect.
   return (
-    <div className="flex h-screen justify-center items-center text-green-600">
+    <div className="flex h-screen justify-center items-center text-green-600" data-testid="loading">
       <ScaleLoader color="green" loading={status} size={100} />
     </div>
   );
@@ -58,7 +58,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
         <title>Peppermint</title>
 
         {/* <link rel="manifest" href="/manifest.json" /> */}
-        
+
         <link
           href="/favicon/favicon.ico"
           rel="icon"
