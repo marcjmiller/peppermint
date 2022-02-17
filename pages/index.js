@@ -69,7 +69,7 @@ export default function Home() {
       }
       if (info.file.status === "done") {
         message.success(`${info.file.name} file uploaded successfully`);
-        setUploaded(true);      
+        setUploaded(true);
       } else if (info.file.status === "error") {
         message.error(`${info.file.name} file upload failed.`);
       }
@@ -190,7 +190,10 @@ export default function Home() {
                   </button>
                 </Upload>
               </div>
-              <ListUserFiles uploaded={uploaded} setUploaded={() => setUploaded()} />
+              <ListUserFiles
+                uploaded={uploaded}
+                setUploaded={() => setUploaded()}
+              />
             </div>
           </div>
         </div>
